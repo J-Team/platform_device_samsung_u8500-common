@@ -119,6 +119,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     power.montblanc \
     lights.montblanc
+#    copybit.montblanc \
+#    sensors.montblanc \
+#    hwcomposer.montblanc \
+#    gralloc.montblanc \
+#    camera.montblanc \
+#    libstagefrighthw
 
 # USB
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
