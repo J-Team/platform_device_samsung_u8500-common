@@ -164,6 +164,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     $(COMMON_PATH)/configs/usr/keylayout/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl
+	
+# Bootanimation
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/bootanimation.zip:system/media/bootanimation.zip
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
