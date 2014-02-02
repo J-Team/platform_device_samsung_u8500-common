@@ -21,7 +21,7 @@
     for different hardware and product builds. -->
 <resources>
 
-  <!-- Remove 3-Dot overflow menu -->
-  <bool name="config_showNavigationBar">false</bool>
+    <!-- Remove 3-Dot overflow menu -->
+    <bool name="config_showNavigationBar">false</bool>
 
 </resources>
