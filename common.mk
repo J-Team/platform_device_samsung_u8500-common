@@ -154,12 +154,17 @@ PRODUCT_PACKAGES += \
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+<<<<<<< HEAD
     $(COMMON_PATH)/configs/usr/keylayout/simple_remote.kl:system/usr/keylayout/simple_remote.kl \
     $(COMMON_PATH)/configs/usr/keylayout/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl
 	
 # Bootanimation
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/bootanimation.zip:system/media/bootanimation.zip
+=======
+    $(COMMON_PATH)/configs/usr/keylayout/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl \
+    $(COMMON_PATH)/configs/usr/keylayout/simple_remote.kl:system/usr/keylayout/simple_remote.kl
+>>>>>>> 6394510... Add Low-IncCall workaround app
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -216,6 +221,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Disable Mobile Data at first boot
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.mobiledata=false
+
+# Low-InCall workaround app
+PRODUCT_PACKAGES += \
+    CMCallService
 
 # Precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
