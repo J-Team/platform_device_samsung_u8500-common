@@ -217,10 +217,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.mobiledata=false
 
-# Low-InCall workaround app
-PRODUCT_PACKAGES += \
-    CMCallService
-
 # Precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
