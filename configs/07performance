@@ -1,6 +1,0 @@
-#!/system/bin/sh
-#
-# Remove this if Advanced Settings installed
-
-echo 48 > /sys/module/mali/parameters/mali_l2_max_reads
-echo 50331648 > /sys/module/mali/parameters/pre_allocated_memory_size_max
