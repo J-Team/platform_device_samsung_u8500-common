@@ -34,9 +34,8 @@ PRODUCT_PACKAGES += \
 # Get the long list of APNs
 PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 
-# Make ROM Usable
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/07performance:system/etc/init.d/07performance
+# Init.d Support
+PRODUCT_COPY_FILES := $(COMMON_PATH)/configs/sysinit:system/bin/sysinit
 
 # Bluetooth configuration files
 #PRODUCT_COPY_FILES += \
