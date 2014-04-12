@@ -108,7 +108,9 @@ $(call inherit-product, device/samsung/u8500-common/opensource/libasound/alsa-li
 # Montblanc libs
 PRODUCT_PACKAGES += \
     power.montblanc \
-    lights.montblanc
+    lights.montblanc \
+    libstagefright_soft_ste_mp3dec \
+    libstagefright_soft_ste_aacdec
 #    copybit.montblanc \
 #    sensors.montblanc \
 #    hwcomposer.montblanc \
