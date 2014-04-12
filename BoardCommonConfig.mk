@@ -16,6 +16,8 @@
 # limitations under the License.
 #
 
+COMMON_PATH := device/samsung/u8500-common
+
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/u8500-common/overlay/include
 
 # Board
@@ -27,6 +29,9 @@ TARGET_BOOTLOADER_BOARD_NAME := montblanc
 #LIBLIGHTS_SET_PLATFORM := u8500
 #LIBSENSORS_SET_PLATFORM := u8500
 #MULTIMEDIA_SET_PLATFORM := u8500
+
+# STE Paths
+MY_MULTIMEDIA_PATH := $(COMMON_PATH)/multimedia
 
 # Partitions
 BOARD_NAND_PAGE_SIZE := 4096
