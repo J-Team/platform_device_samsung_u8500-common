@@ -1,8 +1,0 @@
-# Root
-import /init.superuser.rc
-
-# sysinit (/system/etc/init.d)
-service sysinit /system/bin/sysinit
-    user root
-    oneshot
-    disabled
