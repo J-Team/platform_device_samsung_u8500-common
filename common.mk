@@ -31,9 +31,6 @@ PRODUCT_PACKAGES += \
 #    SamsungServiceMode \
 #    Torch
 
-# Get the long list of APNs
-PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
-
 # Bluetooth configuration files
 #PRODUCT_COPY_FILES += \
 #    system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
