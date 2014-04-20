@@ -18,7 +18,7 @@
 
 COMMON_PATH := device/samsung/u8500-common
 
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/u8500-common/overlay/include
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/u8500-common/include
 
 # Board
 TARGET_NO_BOOTLOADER := true
