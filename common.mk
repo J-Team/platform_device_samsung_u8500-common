@@ -39,12 +39,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/lpm.rc:root/lpm.rc
 
-
 # Init Files
 PRODUCT_COPY_FILES := $(COMMON_PATH)/rootdir/init.local.rc:root/init.local.rc
-
-
-# $(PREBUILT_PATH)/etc/init.local.rc:root/init.local.rc
 
 # Graphics
 PRODUCT_PACKAGES += \
