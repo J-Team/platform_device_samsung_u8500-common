@@ -31,6 +31,9 @@ PRODUCT_PACKAGES += \
 #    SamsungServiceMode \
 #    Torch
 
+# Init.d Support
+PRODUCT_COPY_FILES := $(COMMON_PATH)/configs/sysinit:system/bin/sysinit
+
 # Bluetooth configuration files
 #PRODUCT_COPY_FILES += \
 #    system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
@@ -121,6 +124,16 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     charger \
     charger_res_images
+
+# Root 1
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/rootdir/init.local.rc:root/init.local.rc \
+    external/koush/Superuser/init.superuser.rc:root/init.superuser.rc
+    
+# Root 2
+PRODUCT_PACKAGES += \
+    Superuser \
+    su
 
 # OMX
 PRODUCT_COPY_FILES += \
