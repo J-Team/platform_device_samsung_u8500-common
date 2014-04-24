@@ -102,7 +102,7 @@ PRODUCT_PACKAGES += \
     libaudioutils \
     libtinyalsa
 
-$(call inherit-product, device/samsung/u8500-common/opensource/libasound/alsa-lib-products.mk)
+$(call inherit-product, hardware/STE/hardware/libasound/alsa-lib-products.mk)
 
 # Montblanc libs
 PRODUCT_PACKAGES += \
