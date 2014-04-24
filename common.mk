@@ -34,6 +34,9 @@ PRODUCT_PACKAGES += \
 # Init.d Support
 PRODUCT_COPY_FILES := $(COMMON_PATH)/configs/sysinit:system/bin/sysinit
 
+# APN List
+PRODUCT_COPY_FILES := $(COMMON_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml
+
 # Bluetooth configuration files
 #PRODUCT_COPY_FILES += \
 #    system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
