@@ -26,10 +26,9 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # Packages
 PRODUCT_PACKAGES += \
-    Apollo \
-    Stk
-#    SamsungServiceMode \
-#    Torch
+    Stk \
+    libemoji \
+    e2fsck
 
 # Init.d Support
 PRODUCT_COPY_FILES := $(COMMON_PATH)/configs/sysinit:system/bin/sysinit
