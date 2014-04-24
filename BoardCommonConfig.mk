@@ -31,7 +31,7 @@ TARGET_BOOTLOADER_BOARD_NAME := montblanc
 #MULTIMEDIA_SET_PLATFORM := u8500
 
 # STE Paths
-MY_MULTIMEDIA_PATH := hardware/STE/multimedia
+MY_MULTIMEDIA_PATH := hardware/ST-Ericsson/multimedia
 
 # Partitions
 BOARD_NAND_PAGE_SIZE := 4096

@@ -102,7 +102,7 @@ PRODUCT_PACKAGES += \
     libaudioutils \
     libtinyalsa
 
-$(call inherit-product, hardware/STE/hardware/libasound/alsa-lib-products.mk)
+$(call inherit-product, hardware/ST-Ericsson/hardware/libasound/alsa-lib-products.mk)
 
 # Montblanc libs
 PRODUCT_PACKAGES += \
