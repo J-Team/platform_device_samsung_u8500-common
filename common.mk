@@ -20,6 +20,9 @@ DEVICE_PACKAGE_OVERLAYS := $(COMMON_PATH)/overlay
 # Use the Dalvik VM specific for devices with 512 MB of RAM
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
+# ST-Ericsson Sources
+$(call inherit-product, hardware/ST-Ericsson/common.mk)
+
 # Our devices are HDPI
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
@@ -44,9 +47,11 @@ PRODUCT_COPY_FILES := $(COMMON_PATH)/configs/apns-conf.xml:system/etc/apns-conf.
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/lpm.rc:root/lpm.rc
 
+# Location
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/cacert.txt:system/etc/suplcert/cacert.txt
+
 # Graphics
-PRODUCT_PACKAGES += \
-    libblt_hw
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=131072 \
     persist.sys.strictmode.disable=1 \
@@ -58,16 +63,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Media
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/omxloaders:system/etc/omxloaders
-PRODUCT_PACKAGES += \
-    libomxil-bellagio
 
 # Wifi
+#p2p_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf is right!!!!
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    $(COMMON_PATH)/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
-    $(COMMON_PATH)/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
-PRODUCT_PACKAGES += \
-    libnetcmdiface
+    hardware/broadcom/wlan/bcmdhd/config/p2p_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    hardware/broadcom/wlan/bcmdhd/config/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+    $(COMMON_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
@@ -93,29 +95,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.sends_barcount=1
 
 # Audio
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/asound.conf:system/etc/asound.conf
-
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.usb.default \
     libaudioutils \
     libtinyalsa
 
-$(call inherit-product, hardware/ST-Ericsson/hardware/libasound/alsa-lib-products.mk)
+PRODUCT_COPY_FILES += \
+    hardware/ST-Ericsson/multimedia/audio/adm/asound.conf:system/etc/asound.conf
 
-# Montblanc libs
-PRODUCT_PACKAGES += \
-    power.montblanc \
-    lights.montblanc \
-    libstagefright_soft_ste_mp3dec \
-    libstagefright_soft_ste_aacdec
-#    copybit.montblanc \
-#    sensors.montblanc \
-#    hwcomposer.montblanc \
-#    gralloc.montblanc \
-#    camera.montblanc \
-#    libstagefrighthw
+$(call inherit-product, hardware/ST-Ericsson/audio/libasound/alsa-lib-products.mk)
 
 # USB
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
