@@ -47,10 +47,6 @@ PRODUCT_COPY_FILES := $(COMMON_PATH)/configs/apns-conf.xml:system/etc/apns-conf.
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/lpm.rc:root/lpm.rc
 
-# Location
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/cacert.txt:system/etc/suplcert/cacert.txt
-
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=131072 \
