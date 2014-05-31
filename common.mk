@@ -33,9 +33,6 @@ PRODUCT_PACKAGES += \
     libemoji \
     e2fsck
 
-# Init.d Support
-PRODUCT_COPY_FILES := $(COMMON_PATH)/configs/sysinit:system/bin/sysinit
-
 # APN List
 PRODUCT_COPY_FILES := $(COMMON_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml
 
@@ -80,7 +77,8 @@ PRODUCT_COPY_FILES += \
 # STE
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/cspsa.conf:system/etc/cspsa.conf \
-    $(COMMON_PATH)/configs/usbid_init.sh:system/bin/usbid_init.sh
+    $(COMMON_PATH)/configs/usbid_init.sh:system/bin/usbid_init.sh \
+    $(COMMON_PATH)/configs/sysinit:system/bin/sysinit
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
