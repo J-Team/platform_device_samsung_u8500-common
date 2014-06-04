@@ -192,10 +192,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.boot.selinux=disabled
     
-# LTE disabled
-PRODUCT_PROPERTY_OVERRIDES += \
-    telephony.lteOnGsmDevice=0
-    
 # Disable Mobile Data at first boot
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.mobiledata=false
