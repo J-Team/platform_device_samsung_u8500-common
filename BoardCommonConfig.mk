@@ -63,7 +63,6 @@ TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/u8500-common/shbootimg.mk
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_BASE := 0x40000000
-BOARD_KERNEL_CMDLINE := "console=ttySAC2,115200 consoleblank=0 androidboot.selinux=permissive"
 
 # Graphics
 BOARD_EGL_CFG := device/samsung/u8500-common/configs/egl.cfg
@@ -127,6 +126,7 @@ BOARD_SUPPRESS_EMMC_WIPE := true
 #BOARD_TOUCH_RECOVERY := true
 RECOVERY_FSTAB_VERSION := 2
 BOARD_RECOVERY_SWIPE := true
+
 COMMON_GLOBAL_CFLAGS += -DRECOVERY_CANT_USE_CONFIG_EXT4_FS_XATTR
 
 # STE healthd HAL
