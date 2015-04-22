@@ -188,9 +188,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.android.checkjni=0 \
     dalvik.vm.checkjni=false
 
-# SELinux
+# Disable SELinux
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.boot.selinux=permissive
+    ro.boot.selinux=disabled
     
 # Disable Mobile Data at first boot
 PRODUCT_PROPERTY_OVERRIDES += \
