@@ -27,15 +27,6 @@ $(call inherit-product, hardware/ST-Ericsson/common.mk)
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
-# Packages
-PRODUCT_PACKAGES += \
-    Stk \
-    libemoji \
-    e2fsck
-
-# APN List
-PRODUCT_COPY_FILES := $(COMMON_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml
-
 # Bluetooth configuration files
 #PRODUCT_COPY_FILES += \
 #    system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
@@ -77,8 +68,7 @@ PRODUCT_COPY_FILES += \
 # STE
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/cspsa.conf:system/etc/cspsa.conf \
-    $(COMMON_PATH)/configs/usbid_init.sh:system/bin/usbid_init.sh \
-    $(COMMON_PATH)/configs/sysinit:system/bin/sysinit
+    $(COMMON_PATH)/configs/usbid_init.sh:system/bin/usbid_init.sh
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -110,16 +100,6 @@ PRODUCT_PACKAGES += \
     charger \
     charger_res_images
 
-# Root 1
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/rootdir/init.local.rc:root/init.local.rc \
-    external/koush/Superuser/init.superuser.rc:root/init.superuser.rc
-    
-# Root 2
-PRODUCT_PACKAGES += \
-    Superuser \
-    su
-
 # OMX
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
@@ -131,6 +111,7 @@ PRODUCT_PACKAGES += \
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
+    e2fsck \
     make_ext4fs \
     setup_fs
 
@@ -139,10 +120,6 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     $(COMMON_PATH)/configs/usr/keylayout/simple_remote.kl:system/usr/keylayout/simple_remote.kl \
     $(COMMON_PATH)/configs/usr/keylayout/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl
-	
-# Bootanimation
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/bootanimation.zip:system/media/bootanimation.zip
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -170,18 +147,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.xml:system/etc/permissions/android.software.sip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
-
-# Live Wallpapers
-PRODUCT_PACKAGES += \
-    Galaxy4 \
-    HoloSpiralWallpaper \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    MagicSmokeWallpapers \
-    NoiseField \
-    PhaseBeam \
-    VisualizationWallpapers \
-    librs_jni
 
 # Error Checking
 PRODUCT_PROPERTY_OVERRIDES += \
